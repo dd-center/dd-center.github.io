@@ -26,6 +26,12 @@ DD监控室
 
 https://github.com/CHKZL/DDTV
 
+## Auto_Record_Matsuri <https://matsuri.design>
+
+一条龙式的自动化监控&录播程序，支持多平台和QQbot直播提醒
+
+<https://github.com/fzxiao233/Auto_Record_Matsuri>
+
 ## 更多…...
 
 快！PR！issue！DD的世界无限大！
