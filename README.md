@@ -32,6 +32,12 @@ https://github.com/CHKZL/DDTV
 
 <https://github.com/fzxiao233/Auto_Record_Matsuri>
 
+## Alice-LiveMan
+
+通用多平台转播姬 - 爱丽丝
+
+https://github.com/nekoteaparty/Alice-LiveMan
+
 ## 更多…...
 
 快！PR！issue！DD的世界无限大！
