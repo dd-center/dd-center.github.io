@@ -44,6 +44,12 @@ https://github.com/nekoteaparty/Alice-LiveMan
 
 https://github.com/bilibili-dd-center/AutoCSV
 
+## Dictionary
+
+弹幕文本分词字典
+
+https://github.com/bilibili-dd-center/dictionary
+
 ## 更多…...
 
 快！PR！issue！DD的世界无限大！
