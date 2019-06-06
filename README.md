@@ -38,6 +38,12 @@ https://github.com/CHKZL/DDTV
 
 https://github.com/nekoteaparty/Alice-LiveMan
 
+## AutoCSV
+
+简单的小统计
+
+https://github.com/bilibili-dd-center/AutoCSV
+
 ## 更多…...
 
 快！PR！issue！DD的世界无限大！
