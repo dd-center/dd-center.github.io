@@ -50,6 +50,12 @@ https://github.com/bilibili-dd-center/AutoCSV
 
 https://github.com/bilibili-dd-center/dictionary
 
+## bilibili-live-noscript
+
+其实是bilibili直播间批量禁言脚本
+
+https://github.com/bilibili-dd-center/bilibili-live-noscript
+
 ## 更多…...
 
 快！PR！issue！DD的世界无限大！
