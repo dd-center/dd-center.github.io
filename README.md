@@ -10,25 +10,25 @@ Github上一些有意思的VTB相关项目哦→\_→！
 
 B站仿油管样式评论机
 
-https://github.com/3Shain/BiliChat
+<https://github.com/3Shain/BiliChat>
 
 ## vtbs.moe <https://vtbs.moe>
 
 一个记录 Bilibili 虚拟主播数据的网站
 
-https://github.com/bilibili-dd-center/vtbs.moe
+<https://github.com/bilibili-dd-center/vtbs.moe>
 
 ## bilibili-vtuber-danmaku
 
 B站的直播弹幕都被记录下来咯233
 
-https://github.com/bilibili-dd-center/bilibili-vtuber-danmaku/
+<https://github.com/bilibili-dd-center/bilibili-vtuber-danmaku/>
 
 ## DDTV
 
 DD监控室
 
-https://github.com/CHKZL/DDTV
+<https://github.com/CHKZL/DDTV>
 
 ## Auto_Record_Matsuri <https://matsuri.design>
 
@@ -40,26 +40,26 @@ https://github.com/CHKZL/DDTV
 
 通用多平台转播姬 - 爱丽丝
 
-https://github.com/nekoteaparty/Alice-LiveMan
+<https://github.com/nekoteaparty/Alice-LiveMan>
 
 ## AutoCSV
 
 简单的小统计
 
-https://github.com/bilibili-dd-center/AutoCSV
+<https://github.com/bilibili-dd-center/AutoCSV>
 
 ## Dictionary
 
 弹幕文本分词字典
 
-https://github.com/bilibili-dd-center/dictionary
+<https://github.com/bilibili-dd-center/dictionary>
 
 ## bilibili-live-noscript
 
 其实是bilibili直播间批量禁言脚本
 
-https://github.com/bilibili-dd-center/bilibili-live-noscript
+<https://github.com/bilibili-dd-center/bilibili-live-noscript>
 
 ## 更多…...
 
-快！PR！issue！DD的世界无限大！
+快！PR！issue！~~DD的世界无限大！~~
