@@ -2,6 +2,10 @@
 
 Github上一些有意思的VTB相关项目哦→\_→！
 
+### 部分项目构成：
+
+![dependency](dependency.svg)
+
 ## BiliChat <https://bilichat.3shain.com>
 
 B站仿油管样式评论机

@@ -1,0 +1,43 @@
+digraph {
+	dictionary;
+	"bili-api";
+	"bilibili-live-ws";
+	txt_to_csv;
+	"bilibili-live-noscript";
+	BiliChat;
+	"bilibili-vtuber-videos-danmaku";
+	/* "danmaku-analyze"; */
+	subgraph "cluster_bilibili-" {
+		label = "bilibili.com";
+		"api.bilibili.com";
+		"api.live.bilibili.com";
+		"broadcastlv.chat.bilibili.com";
+	}
+	subgraph "cluster_vtbs.moe" {
+		label="vtbs.moe";
+		"api.vtbs.moe";
+		"api.vtbs.moe" -> "vtbs.moe"
+	}
+	subgraph "cluster_bilibili-vtuber-danmaku" {
+		label = "bilibili-vtuber-danmaku";
+		vd;
+		vdMonster;
+	}
+	"api.bilibili.com" -> "bili-api";
+	"api.live.bilibili.com" -> "bili-api";
+	"bilibili-live-ws" -> "bili-api" -> "api.vtbs.moe";
+	"broadcastlv.chat.bilibili.com" -> "bilibili-live-ws" -> vd;
+	"api.vtbs.moe" -> vd [ label = "Vtuber List" ];
+	"api.vtbs.moe" -> "bilibili-vtuber-videos-danmaku" [ label = "Vtuber List" ];
+	vd -> "api.vtbs.moe" [ label = "Live danmaku event" ];
+	vd -> vdMonster;
+	vdMonster -> nodejieba;
+	dictionary -> nodejieba;
+	nodejieba -> "api.vtbs.moe";
+	vd -> txt_to_csv -> "bilibili-live-noscript";
+	vdMonster -> "api.vtbs.moe" [ label = "Live danmaku analyze" ];
+	"broadcastlv.chat.bilibili.com" -> BiliChat -> "vtbs.moe";
+
+	/* "bilibili-vtuber-videos-danmaku" -> "danmaku-analyze"; */
+	/* vdMonster -> "danmaku-analyze" -> "api.vtbs.moe"; */
+}
