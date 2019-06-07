@@ -54,6 +54,12 @@ DD监控室
 
 <https://github.com/bilibili-dd-center/dictionary>
 
+## script-anti-back-end
+
+脚本黑名单挖掘
+
+<https://github.com/pren1/script-anti-back-end>
+
 ## bilibili-live-noscript
 
 其实是bilibili直播间批量禁言脚本
