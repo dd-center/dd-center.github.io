@@ -6,6 +6,7 @@ digraph {
 	"bilibili-live-noscript";
 	BiliChat;
 	"bilibili-vtuber-videos-danmaku";
+	"script-anti-back-end";
 	/* "danmaku-analyze"; */
 	subgraph "cluster_bilibili-" {
 		label = "bilibili.com";
@@ -29,12 +30,14 @@ digraph {
 	"broadcastlv.chat.bilibili.com" -> "bilibili-live-ws" -> vd;
 	"api.vtbs.moe" -> vd [ label = "Vtuber List" ];
 	"api.vtbs.moe" -> "bilibili-vtuber-videos-danmaku" [ label = "Vtuber List" ];
+	"bili-api" -> "bilibili-vtuber-videos-danmaku";
 	vd -> "api.vtbs.moe" [ label = "Live danmaku event" ];
 	vd -> vdMonster;
 	vdMonster -> nodejieba;
 	dictionary -> nodejieba;
 	nodejieba -> "api.vtbs.moe";
-	vd -> txt_to_csv -> "bilibili-live-noscript";
+	vd -> txt_to_csv;
+	vd -> "script-anti-back-end" -> "bilibili-live-noscript";
 	vdMonster -> "api.vtbs.moe" [ label = "Live danmaku analyze" ];
 	"broadcastlv.chat.bilibili.com" -> BiliChat -> "vtbs.moe";
 
