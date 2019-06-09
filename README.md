@@ -12,6 +12,10 @@ B站仿油管样式评论机
 
 <https://github.com/3Shain/BiliChat>
 
+用户指南——使用及部署指导（欢迎PR自建的服务器！）
+
+<https://github.com/Afanyiyu/BiliChat-User-Guide>
+
 ## vtbs.moe <https://vtbs.moe>
 
 一个记录 Bilibili 虚拟主播数据的网站
