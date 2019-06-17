@@ -29,22 +29,28 @@ digraph {
 		subgraph "cluster_open_api" {
 			label = "api.vtbs.moe Public API";
 			"/v1";
-			"/vd";
 			"/vds";
 		}
 	}
+
 	subgraph "cluster_bilibili-vtuber-danmaku" {
 		label = "bilibili-vtuber-danmaku (inactive)";
 		vdMonster;
 	}
+
 	subgraph "cluster_bilibili-vtuber-danmaku-relay" {
 		label = "bilibili-vtuber-live-danmaku-relay";
 		vd;
 	}
+
 	subgraph "cluster_influx-bilibili-vtuber-danmaku" {
 		label = "influx-danmaku-recorder";
 		eagle;
+		falcon;
+		/* eagle -> influxDB -> falcon; */
+		eagle -> falcon;
 	}
+
 	"api.bilibili.com" -> "bili-api";
 	"api.live.bilibili.com" -> "bili-api";
 	"bilibili-live-ws" -> "bili-api" -> "api.vtbs.moe";
@@ -52,27 +58,19 @@ digraph {
 	"api.vtbs.moe" -> vd [ label = "vtbs.js" ];
 	"api.vtbs.moe" -> "bilibili-vtuber-videos-danmaku" [ label = "vtbs.js" ];
 	"bili-api" -> "bilibili-vtuber-videos-danmaku";
-	/* vd -> vdMonster; */
-	vd -> Hawk;
 	vd -> Snake;
 	vd -> eagle;
 	"api.vtbs.moe" -> eagle;
 
 	dictionary -> nodejieba;
+	falcon -> Hawk;
+	falcon -> "api.vtbs.moe";
 	nodejieba -> Hawk;
-	/* nodejieba -> vdMonster; */
-	/* vd -> txt_to_csv; */
-	/* vd -> "script-anti-back-end" */
-	"script-anti-back-end" -> "bilibili-live-noscript";
+	vdMonster -> "script-anti-back-end" -> "bilibili-live-noscript";
+	vdMonster -> txt_to_csv
 	"broadcastlv.chat.bilibili.com" -> BiliChat -> "vtbs.moe";
 
 	vd -> "api.vtbs.moe" [style=dotted];
-	/* vd -> "/vds"; */
-	/* vdMonster -> "api.vtbs.moe" */
 	"api.vtbs.moe" -> "/v1" [style=dotted];
-	/* "api.vtbs.moe" -> "/vd" [style=dotted]; */
 	"api.vtbs.moe" -> "/vds" [style=dotted];
-
-	/* "bilibili-vtuber-videos-danmaku" -> "danmaku-analyze"; */
-	/* vdMonster -> "danmaku-analyze" -> "api.vtbs.moe"; */
 }
