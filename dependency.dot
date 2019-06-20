@@ -4,6 +4,7 @@ digraph {
 	"bilibili-live-noscript" [shape=box];
 	"bilibili-vtuber-videos-danmaku" [shape=box];
 	"script-anti-back-end" [shape=box];
+	"api.vtb.wiki" [shape=box];
 	/* "danmaku-analyze"; */
 	subgraph "cluster_bilibili_package" {
 		label = "Extenal";
@@ -61,6 +62,7 @@ digraph {
 	vd -> Snake;
 	vd -> eagle;
 	"api.vtbs.moe" -> eagle;
+	"api.vtb.wiki" -> "api.vtbs.moe";
 
 	dictionary -> nodejieba;
 	falcon -> Hawk;
