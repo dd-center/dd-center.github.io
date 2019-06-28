@@ -32,7 +32,9 @@ digraph {
 		subgraph "cluster_open_api" {
 			label = "api.vtbs.moe Public API";
 			"/v1";
+			"/v2";
 			"/vds";
+			"/endpoint";
 		}
 	}
 
@@ -77,5 +79,7 @@ digraph {
 
 	vd -> "api.vtbs.moe" [style=dotted];
 	"api.vtbs.moe" -> "/v1" [style=dotted];
+	"api.vtbs.moe" -> "/v2" [style=dotted];
 	"api.vtbs.moe" -> "/vds" [style=dotted];
+	"api.vtbs.moe" -> "/endpoint" [style=dotted];
 }
