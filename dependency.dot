@@ -1,10 +1,12 @@
 digraph {
 	dictionary [shape=box];
 	txt_to_csv [shape=box];
+	vdb [shape=box];
 	"bilibili-live-noscript" [shape=box];
 	"bilibili-vtuber-videos-danmaku" [shape=box];
 	"script-anti-back-end" [shape=box];
 	"api.vtb.wiki" [shape=box];
+	vdb -> "api.vtb.wiki" [style=dotted];
 	/* "danmaku-analyze"; */
 	subgraph "cluster_bilibili_package" {
 		label = "Extenal";
@@ -61,6 +63,7 @@ digraph {
 	"bili-api" -> "bilibili-vtuber-videos-danmaku";
 	vd -> Snake;
 	vd -> eagle;
+	vdb -> "api.vtbs.moe";
 	"api.vtbs.moe" -> eagle;
 	"api.vtb.wiki" -> "api.vtbs.moe";
 
